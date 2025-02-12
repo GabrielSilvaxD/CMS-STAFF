@@ -19,18 +19,15 @@ const pool = new Pool({
 const displayBanner = () => {
     console.log('\n');
     console.log(
-        gradient('#0066CC', '#2E8B57')(
-            figlet.textSync('StaffSync Pro', {
+        gradient('#0066C=', '#2E8B57')(
+            figlet.textSync('CMS-STAFF', {
                 font: 'Standard',
                 horizontalLayout: 'fitted'
             })
         )
     );
-    console.log('\n');
-    console.log(chalk.blue('═══════════════════════════════════════'));
+    ;
     console.log(chalk.blue('  CMS - STAFF   '));
-    console.log(chalk.blue('═══════════════════════════════════════'));
-    console.log('\n');
 };
 
 // Main menu options
@@ -98,7 +95,7 @@ const mainMenuChoices = [
     },
     new inquirer.Separator(chalk.blue('════════ Exit ════════')),
     {
-        name: '👋 Exit StaffSync Pro',
+        name: '👋 Exit CMS-STAFF',
         value: 'EXIT'
     }
 ];
@@ -625,7 +622,7 @@ async function mainMenu() {
                 await deleteEmployee();
                 break;
             case 'EXIT':
-                console.log(chalk.blue('\nThank you for using StaffSync Pro!\n'));
+                console.log(chalk.blue('\nThank you for using CMS-STAFF!\n'));
                 process.exit();
         }
     } catch (err) {
